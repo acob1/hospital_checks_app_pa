@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import 'home/home_screen.dart';
+import 'videos/video_feed_screen.dart';
 import 'messages/messages_screen.dart';
 import 'schedule/schedule_screen.dart';
 import 'profile/profile_screen.dart';
@@ -17,6 +18,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _screens = const [
     HomeScreen(),
+    VideoFeedScreen(),
     ScheduleScreen(),
     MessagesScreen(),
     ProfileScreen(),
@@ -44,9 +46,10 @@ class _MainScreenState extends State<MainScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _buildNavItem(Icons.home_outlined, Icons.home, 'Home', 0),
-                _buildNavItem(Icons.calendar_today_outlined, Icons.calendar_today, '', 1),
-                _buildNavItem(Icons.chat_bubble_outline, Icons.chat_bubble, '', 2),
-                _buildNavItem(Icons.person_outline, Icons.person, '', 3),
+                _buildNavItem(Icons.play_circle_outline, Icons.play_circle, '', 1),
+                _buildNavItem(Icons.calendar_today_outlined, Icons.calendar_today, '', 2),
+                _buildNavItem(Icons.chat_bubble_outline, Icons.chat_bubble, '', 3),
+                _buildNavItem(Icons.person_outline, Icons.person, '', 4),
               ],
             ),
           ),
